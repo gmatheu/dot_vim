@@ -15,8 +15,8 @@ endif
 " -----------------------------
 " File Locations
 " -----------------------------
-set backupdir=~/.vim/.backup
-set directory=~/.vim/.tmp
+set backupdir=~/.vim/.backup// " Double // causes backups to use full file path
+set directory=~/.vim/.tmp//
 set spellfile=~/.vim/spell/custom.en.utf-8.add
 " Persistent Undo
 if has('persistent_undo')
@@ -109,7 +109,7 @@ set listchars=""
 " make tabs visible
 set listchars=tab:▸▸
 " show trailing spaces as dots
-set listchars+=trail:.
+set listchars+=trail:•
 " The character to show in the last column when wrap is off and the line
 " continues beyond the right of the screen
 set listchars+=extends:>
