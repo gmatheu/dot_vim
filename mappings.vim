@@ -12,9 +12,9 @@ let maplocalleader = "\\"
 " -----------------------
 
 " No-op ^ and $ while learning H and L
-noremap ^ <nop>
-noremap $ <nop>
-nnoremap <leader>sc <nop>
+" noremap ^ <nop>
+" noremap $ <nop>
+" nnoremap <leader>sc <nop>
 
 " ---------------
 " Regular Mappings
@@ -154,6 +154,7 @@ nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
 nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
 
 " Close the current window
+nnoremap <silent> <leader>sc :close<CR>
 nnoremap <silent> <m-w> :close<CR>
 " ---------------
 " Typo Fixes
