@@ -101,6 +101,7 @@ inoremap jK <Esc>
 
 " Clear search
 noremap <silent><leader>/ :nohls<CR>
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
