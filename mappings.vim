@@ -6,6 +6,7 @@
 " Note: This line MUST come before any <leader> mappings
 let mapleader=","
 let maplocalleader = "\\"
+nmap \ ,
 
 " -----------------------
 " Unmapped While Learning
