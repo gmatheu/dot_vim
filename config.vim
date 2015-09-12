@@ -31,12 +31,12 @@ set ruler          " Ruler on
 set number         " Line numbers on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
-set cmdheight=2    " Make the command area two lines high
+set cmdheight=1    " Make the command area two lines high
 set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
 if exists('+colorcolumn')
-  set colorcolumn=100 " Color the 80th column differently as a wrapping guide.
+  set colorcolumn=100 " Color the 100th column differently as a wrapping guide.
 endif
 " Disable tooltips for hovering keywords in Vim
 if exists('+ballooneval')
@@ -63,7 +63,7 @@ set autowrite          " Writes on make/shell commands
 set timeoutlen=400     " Time to wait for a command (after leader for example).
 set ttimeout
 set ttimeoutlen=100    " Time to wait for a key sequence.
-set nofoldenable       " Disable folding entirely.
+set foldenable       " Enable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 set formatoptions=crql
 set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
