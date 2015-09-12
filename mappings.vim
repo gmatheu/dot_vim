@@ -4,8 +4,8 @@
 
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
-let mapleader=","
-let maplocalleader = "\\"
+let mapleader=','
+let maplocalleader = '\\'
 nmap \ ,
 
 " -----------------------
@@ -22,11 +22,11 @@ nmap \ ,
 " ---------------
 
 " Use ; for : in normal and visual mode, less keystrokes
-" nnoremap ; :
-" vnoremap ; :
+nnoremap ; :
+vnoremap ; :
 
 " Yank entire buffer with gy
-nnoremap gy :%y+<cr>
+nnoremap gy :0,$ y<cr>
 
 " Select entire buffer
 nnoremap vy ggVG
@@ -64,9 +64,12 @@ nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(st
 " Window Movement
 " ---------------
 nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
+nnoremap <silent> <M-h> :wincmd h<CR>
 nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
 nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
+nnoremap <silent> <M-k> :wincmd k<CR>
 nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
+nnoremap <silent> <M-l> :wincmd l<CR>
 
 "   4 Window Splits
 "
@@ -145,14 +148,13 @@ nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
 
-" Format a json file with Python's built in json.tool.
-" from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>jt <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
-nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=json<CR>
+" Format a json file with Underscore CLI
+" Inspirited by https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
+nnoremap <leader>gj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
-nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>
-nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>
+nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
+nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 
 " Close the current window
 nnoremap <silent> <leader>sc :close<CR>
@@ -176,6 +178,12 @@ vnoremap K k
 " Toggle paste mode with F5
 nnoremap <silent> <F5> :set paste!<CR>
 
+" Paste and select pasted
+nnoremap <expr> gpp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+" Paste and select pasted
+nnoremap gp :normal pgp<cr>
+
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
 
@@ -184,7 +192,7 @@ iabbrev clg console.log
 
 " copy current file name (relative/absolute) to system clipboard
 " from http://stackoverflow.com/a/17096082/22423
-if has("mac") || has("gui_macvim") || has("gui_mac")
+if has('mac') || has('gui_macvim') || has('gui_mac')
   " relative path  (src/foo.txt)
   nnoremap <silent> <leader>yp :let @*=expand("%")<CR>
 

@@ -8,7 +8,7 @@
 set background=dark
 colorscheme jellybeans
 " Force 256 color mode if available
-if $TERM =~ "-256color"
+if $TERM =~ '-256color'
    set t_Co=256
 endif
 
@@ -53,14 +53,16 @@ syntax enable
 set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
+" longest common part, then all.
+set wildmode=longest,full
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
-set cf                 " Enable error files & error jumping.
+set confirm            " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
-" set timeoutlen=450     " Time to wait for a command (after leader for example).
+set timeoutlen=400     " Time to wait for a command (after leader for example).
 set ttimeout
-set ttimeoutlen=100    " Time to wait for a command (after leader for example).
+set ttimeoutlen=100    " Time to wait for a key sequence.
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 set formatoptions=crql
