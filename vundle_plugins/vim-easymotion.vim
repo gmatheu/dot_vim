@@ -20,3 +20,4 @@ vmap s <Plug>(easymotion-s)
 
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+map <Leader>w <Plug>(easymotion-w)
