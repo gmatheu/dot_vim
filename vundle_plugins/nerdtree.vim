@@ -4,6 +4,7 @@ if exists('g:vundle_installing_plugins')
 endif
 
 nnoremap <silent><leader>nn :NERDTreeToggle<CR>:wincmd =<CR>
+map <F2> :NERDTreeToggle<CR>
 nnoremap <silent><leader>nf :NERDTreeFind<CR>:wincmd =<CR>
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeChDirMode = 1
