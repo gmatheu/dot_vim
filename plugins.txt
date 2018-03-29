@@ -36,7 +36,7 @@ vim-surround
 ag
 editorconfig
 vim-rake
-csv
+* csv
 vim-repeat
 vimux
 vim-hardtime
