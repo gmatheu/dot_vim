@@ -1,5 +1,5 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'kien/ctrlp.vim'
+  Plugin 'ctrlpvim/ctrlp.vim'
   finish
 endif
 
@@ -27,3 +27,13 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
+
+function BrightHighlightOn()
+  hi cursorline term=bold,underline cterm=bold,underline ctermfg=1 gui=bold,underline guifg=#F07178
+endfunction
+
+function BrightHighlightOff()
+  set nocursorline
+endfunction
