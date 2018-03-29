@@ -1,0 +1,2 @@
+call InstallPlugin('lervag/vimtex')
+
