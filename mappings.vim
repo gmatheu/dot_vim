@@ -123,8 +123,8 @@ nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 " Highlight search word under cursor without jumping to next
 nnoremap <leader>h *<C-O>
 
-" Toggle spelling mode with ,s
-nnoremap <silent> <leader>s :set spell!<CR>
+" Toggle spelling mode
+nnoremap <silent> <leader>sp :set spell!<CR>
 
 " Quickly switch to last buffer
 nnoremap <leader>, :e#<CR>
@@ -159,6 +159,12 @@ nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 " Close the current window
 nnoremap <silent> <leader>sc :close<CR>
 nnoremap <silent> <m-w> :close<CR>
+
+" Plug mappings here because they don't work in plug.vim
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pc :PlugClean<CR>
+
 " ---------------
 " Typo Fixes
 " ---------------
@@ -186,9 +192,6 @@ nnoremap gp :normal pgp<cr>
 
 " Insert date
 iabbrev ddate <C-R>=strftime("%Y-%m-%d")<CR>
-
-" Insert a console.log
-iabbrev clg console.log
 
 " copy current file name (relative/absolute) to system clipboard
 " from http://stackoverflow.com/a/17096082/22423

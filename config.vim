@@ -15,13 +15,14 @@ endif
 " -----------------------------
 " File Locations
 " -----------------------------
-set backupdir=~/.vim/.backup// " Double // causes backups to use full file path
-set directory=~/.vim/.tmp//
-set spellfile=~/.vim/spell/custom.en.utf-8.add
+" Double // causes backups to use full file path
+exec 'set backupdir=' . g:vimdir . '/.backup//'
+exec 'set directory=' . g:vimdir . '/.tmp//'
+exec 'set spellfile=' . g:vimdir . '/spell/custom.en.utf-8.add'
 " Persistent Undo
 if has('persistent_undo')
   set undofile
-  set undodir=~/.vim/.undo
+  exec 'set undodir=' . g:vimdir . '/.undo'
 endif
 
 " ---------------
@@ -31,7 +32,8 @@ set ruler          " Ruler on
 set number         " Line numbers on
 set nowrap         " Line wrapping off
 set laststatus=2   " Always show the statusline
-set cmdheight=1    " Make the command area two lines high
+set cmdheight=1    " Make the command area one lines high
+set cursorline     " Highlight current line
 set encoding=utf-8
 set noshowmode     " Don't show the mode since Powerline shows it
 set title          " Set the title of the window in the terminal to the file
@@ -50,6 +52,8 @@ endif
 " Behaviors
 " ---------------
 syntax enable
+set nocompatible " be iMproved
+filetype plugin indent on
 set backup             " Turn on backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
@@ -63,7 +67,7 @@ set autowrite          " Writes on make/shell commands
 set timeoutlen=400     " Time to wait for a command (after leader for example).
 set ttimeout
 set ttimeoutlen=100    " Time to wait for a key sequence.
-set foldenable       " Enable folding entirely.
+set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 set formatoptions=crql
 set iskeyword+=\$,-   " Add extra characters that are valid parts of variables
@@ -110,6 +114,8 @@ set list
 set listchars=""
 " make tabs visible
 set listchars=tab:▸▸
+" make non-breakable spaces visible
+set listchars+=nbsp:¬
 " show trailing spaces as dots
 set listchars+=trail:•
 " The character to show in the last column when wrap is off and the line
