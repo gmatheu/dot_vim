@@ -1,0 +1,1 @@
+/home/gmatheu/.vim/init.vim
