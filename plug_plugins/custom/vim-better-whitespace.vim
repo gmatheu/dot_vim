@@ -1,7 +1,4 @@
-if exists('g:vundle_installing_plugins')
-  Plugin 'ntpeters/vim-better-whitespace'
-  finish
-endif
+call InstallPlugin('ntpeters/vim-better-whitespace')
 
 autocmd BufWritePre * StripWhitespace
 
