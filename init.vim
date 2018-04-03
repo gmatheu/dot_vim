@@ -12,6 +12,7 @@ else
 endif
 
 " All of the plugins are installed with Plug from this file.
+let g:pluginsdir = g:vimdir . "/plug_plugins/"
 exec "source " . g:vimdir . "/plug.vim"
 
 " Platform (Windows, Mac, etc.) configuration.
