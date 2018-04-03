@@ -1,62 +1,84 @@
-vim-haml
 vim-fugitive
-vim-ruby
+* vim-ruby
 vim-signify
-vim-bundler
+ale
+vim-voogle
 scratch
+vim-jsbeautify
 vim-unimpaired
 switch
-vim-less
+* vim-less
 vim-airline
+webapi-vim
 ultisnips
 HelpClose
-vim-better-whitespace
+vim-devicons
+vim-side-search
+splitjoin
+vim-togglecursor
+vim-swap
+editorconfig-vim
 vim-visual-star-search
-vim-ruby-refactoring
+* vim-ruby-refactoring
+auto-pairs
 supertab
 vim-markdown
+* textile
+* vim-handlebars
 vim-textobj-user
 tcomment_vim
-indenthtml
+* indenthtml
 vim-misc
 vim-textobj-rubyblock
+zoomwintab
+* vim-numbertoggle
+* vim-grepper
+* vim-marked
 nerdtree
 nerdtree-git-plugin
+taskpaper
+* vim-node
 vim-autoreadwatch
 vim-tmux-navigator
-vim-coffee-script
-nginx
-vim-puppet
+vim-import-js
 vim-indent-guides
-ZoomWin
+fzf
+* ZoomWin
 Join
-vim-css3-syntax
-tabular
+vim-reveal-in-finder
+* vim-rhubarb
+* tabular
 vim-surround
-ag
-editorconfig
-vim-rake
+vim-airline-themes
+* github-complete
+* vim-rake
 * csv
 vim-repeat
 vimux
+portkey
+vim-nerdtree-syntax-highlight
 vim-hardtime
 vim-tmux
+vim-polyglot
 vim-turbux
-html5
-vim-cucumber
+emmet-vim
 MatchTagAlways
-vim-jade
+* vim-jade
 vim-startify
 vim-easymotion
 jellybeans
 vim-session
-vundle
+* vundle
 vim-abolish
 vim-eunuch
-L9
+* L9
 undotree
+targets
+vim-textobj-reactprop
+neoformat
 vim-javascript
 vim-endwise
-delimitMate
+incsearch
+vim-anzu
 ctrlp
 YouCompleteMe
