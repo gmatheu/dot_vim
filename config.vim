@@ -6,10 +6,15 @@
 " Color
 " ---------------
 set background=dark
-colorscheme base16-material-darker
 " Force 256 color mode if available
 if $TERM =~ '-256color'
-   set t_Co=256
+  set t_Co=256
+  let base16colorspace=256
+endif
+if filereadable(expand("~/.vimrc_background"))
+  source ~/.vimrc_background
+else
+  colorscheme jellybeans
 endif
 
 " -----------------------------
