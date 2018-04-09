@@ -29,3 +29,4 @@ exec "source " . g:vimdir . "/plugin_config.vim"
 exec "source " . g:vimdir . "/functions.vim"
 " Auto commands.
 exec "source " . g:vimdir . "/autocmds.vim"
+
