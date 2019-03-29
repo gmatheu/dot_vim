@@ -22,7 +22,7 @@ vim-visual-star-search
 * vim-ruby-refactoring
 auto-pairs
 supertab
-vim-markdown
+* vim-markdown
 * textile
 * vim-handlebars
 vim-textobj-user
