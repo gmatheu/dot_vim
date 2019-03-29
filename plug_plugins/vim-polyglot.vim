@@ -4,5 +4,5 @@ if exists('g:plug_installing_plugins')
 endif
 
 " I use the same repo, but I want it to be as up to date as possible.
-let g:polyglot_disabled = ['javascript', 'markdown']
+let g:polyglot_disabled = ['javascript', 'markdown', 'latex']
 let g:vim_json_syntax_conceal = 1
