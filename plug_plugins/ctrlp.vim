@@ -9,6 +9,7 @@ let g:ctrlp_map = ''
 " Ensure max height isn't too large. (for performance)
 let g:ctrlp_max_height = 10
 " Fix fix new windows opening in split from startify
+nnoremap <leader>b :CtrlP
 let g:ctrlp_reuse_window = 'startify'
 let g:ctrlp_mruf_max = 350
 let g:ctrlp_mruf_default_order = 0
@@ -16,6 +17,10 @@ let g:ctrlp_mruf_default_order = 0
 " " Leader Commands
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>` :CtrlP<CR>
+
+let g:ctrlp_working_path_mode = 'ra'
+
 
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
