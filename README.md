@@ -1,4 +1,14 @@
-# Custom Vim Configuration of Champions
+# The Vim Configuration of Champions
+
+[Jump to Plugin List](#plugin-list)
+
+[![Screenshot][ss]][ss]
+
+[ss]: https://github.com/mutewinter/dot_vim/raw/master/screenshots/screenshot_1.png
+
+## Plugins and Configuration in their Own File
+
+Each plugin is included and managed in its [own file](/plug_plugins).
 
 ## Installation
 
@@ -12,7 +22,7 @@ Now you have a choice. The automated script or the manual process.
 **or**
 
 1. `rake vim:link` to make the `.vimrc` and `.nvimrc` symbolic links.
-2. `vim +PlugInstall +qall`
+3. `vim +PlugInstall +qall`
 
 Enjoy enhanced productivity, increased levitation, reduced watermelon-related
 accidents, and startling sex appeal.
@@ -41,22 +51,22 @@ dependencies.
 ## Mappings
 
 * Typing `jk` insert mode is equivalent to `Escape`.
-* Pressing `enter` in normal mode saves the current buffer.
+* Pressing `enter` in normal mode saves the current buffer, if needed.
 
 And many more. See [`mappings.vim`](mappings.vim) and
-[`vundle_plugins`](vundle_plugins) for more.
+[`plug_plugins`](plug_plugins) for more.
 
 ## Installing Custom Plugins
 
 Create a new `.vim` file with the same name as the plugin you'd like to install
-in [`vundle_plugins/custom`](vundle_plugins/custom). Then add the installation
+in [`plug_plugins/custom`](plug_plugins/custom). Then add the installation
 block. For example:
 
-`vundle_plugins/custom/vim-move.vim`
+`plug_plugins/custom/vim-move.vim`
 
 ```viml
-if exists('g:vundle_installing_plugins')
-  Plugin 'matze/vim-move.vim'
+if exists('g:plug_installing_plugins')
+  Plug 'matze/vim-move.vim'
   finish
 endif
 

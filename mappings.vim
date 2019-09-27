@@ -13,9 +13,9 @@ nmap \ ,
 " -----------------------
 
 " No-op ^ and $ while learning H and L
-" noremap ^ <nop>
-" noremap $ <nop>
-" nnoremap <leader>sc <nop>
+noremap ^ <nop>
+noremap $ <nop>
+nnoremap <leader>sc <nop>
 
 " ---------------
 " Regular Mappings
@@ -40,8 +40,8 @@ noremap H ^
 noremap L $
 
 " Create newlines without entering insert mode
-nnoremap go o<Esc>k
-nnoremap gO O<Esc>j
+nnoremap go m`o<Esc>``
+nnoremap gO m`O<Esc>``
 
 " remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
@@ -97,10 +97,10 @@ nnoremap <silent> gx :wincmd x<CR>
 inoremap <C-l> <C-x><C-l>
 
 " Scroll larger amounts with C-j / C-k
-nnoremap <C-j> 15gjzz
-nnoremap <C-k> 15gkzz
-vnoremap <C-j> 15gjzz
-vnoremap <C-k> 15gkzz
+nnoremap gj 15gjzz
+nnoremap gk 15gkzz
+vnoremap gj 15gjzz
+vnoremap gk 15gkzz
 
 " ---------------
 " Insert Mode Mappings
@@ -147,10 +147,6 @@ nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 
 " Format the entire file
 nnoremap <leader>fef mx=ggG='x
-
-" Format a json file with Underscore CLI
-" Inspirited by https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>gj <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
 nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>

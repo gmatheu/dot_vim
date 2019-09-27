@@ -7,3 +7,6 @@
 /* vundle_plugins/* */
 /* !vundle_plugins/*.vim */
 /spell
+
+/vundle_plugins/custom
+/.updates
