@@ -81,4 +81,4 @@ vim-endwise
 incsearch
 vim-anzu
 ctrlp
-YouCompleteMe
+* YouCompleteMe
