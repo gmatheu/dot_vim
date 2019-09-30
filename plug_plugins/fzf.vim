@@ -12,7 +12,8 @@ nnoremap <leader>gf :GFiles<CR>
 nnoremap <leader>gm :GFiles?<CR>
 nnoremap <leader>bl :BLines<CR>
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 " ----------------------------------------------------------
 " Files + devicons
