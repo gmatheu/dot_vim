@@ -1,6 +1,6 @@
 vim-fugitive
 * vim-ruby
-vim-signify
+* vim-signify
 ale
 vim-voogle
 scratch
@@ -21,7 +21,7 @@ editorconfig-vim
 vim-visual-star-search
 * vim-ruby-refactoring
 auto-pairs
-supertab
+* supertab
 * vim-markdown
 * textile
 * vim-handlebars
@@ -61,7 +61,7 @@ vim-hardtime
 vim-tmux
 vim-polyglot
 vim-turbux
-emmet-vim
+* emmet-vim
 MatchTagAlways
 * vim-jade
 vim-startify
@@ -77,8 +77,9 @@ targets
 vim-textobj-reactprop
 neoformat
 vim-javascript
-vim-endwise
+* vim-endwise
 incsearch
 vim-anzu
 ctrlp
 * YouCompleteMe
+coc

@@ -52,7 +52,7 @@ set title          " Set the title of the window in the terminal to the file
 set updatetime=400 " Added based on guidance from coc.nvim
 set signcolumn=yes " Ensures no flickering for coc-git
 if exists('+colorcolumn')
-  set colorcolumn=100 " Color the 100th column differently as a wrapping guide.
+  set colorcolumn=120 " Color the 120th column differently as a wrapping guide.
 endif
 " Disable tooltips for hovering keywords in Vim
 if exists('+ballooneval')

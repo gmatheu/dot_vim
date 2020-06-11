@@ -18,6 +18,7 @@ let g:ctrlp_mruf_default_order = 0
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>` :CtrlP<CR>
+nnoremap <leader>\| :CtrlP<CR>
 
 let g:ctrlp_working_path_mode = 'ra'
 
@@ -35,9 +36,9 @@ endif
 let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
 
 function BrightHighlightOn()
-  hi cursorline term=bold,underline cterm=bold,underline ctermfg=1 gui=bold,underline guifg=#F07178
+  " hi cursorline term=bold,underline cterm=bold,underline ctermfg=1 gui=bold,underline guifg=#F07178
 endfunction
 
 function BrightHighlightOff()
-  set nocursorline
+  " set nocursorline
 endfunction
